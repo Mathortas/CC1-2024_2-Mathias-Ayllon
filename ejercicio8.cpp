@@ -37,7 +37,7 @@ int main() {
             product *= (gigantisimo[i + j] - '0');  //el i+j se encarga de agarrar el digito en la posicion del gigantisimo y el -'0' se encarga de convertir el digito en un numero segun gpt :v
         }
 
-        //segun lo entendido size_t agarra el valor de manera int y asi sigue recorriendo el string
+        //segun lo entendido size_t define a i y j como una variable int que se hace mas y mas largo y ayuda a representar al gigantisimo
         if (product > productoMayor) {
             productoMayor = product;
         }
