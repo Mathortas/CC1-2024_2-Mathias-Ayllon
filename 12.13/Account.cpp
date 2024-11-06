@@ -1,4 +1,3 @@
-// Exercise 12.13: Account.cpp
 
 #include <iostream>
 #include "Account.h"

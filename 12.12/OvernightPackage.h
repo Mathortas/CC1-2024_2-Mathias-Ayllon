@@ -1,23 +1,20 @@
-// Exercise 12.12: OvernightPackage.h
-
 #ifndef OVERNIGHTPACKAGE_H
 #define OVERNIGHTPACKAGE_H
 
 #include "Package.h"
 
 class OvernightPackage : public Package {
-
 public:
+    OvernightPackage(const std::string& senderName, const std::string& senderAddress, const std::string& senderCity,
+                     const std::string& senderState, unsigned senderZip, 
+                     const std::string& recipientName, const std::string& recipientAddress, 
+                     const std::string& recipientCity, const std::string& recipientState, 
+                     unsigned recipientZip, double weight, double costPerOunce, double extraFeePerOunce);
 
-  explicit OvernightPackage( const PData&, const PData&,
-                             const double, const double, const double );
-   virtual ~OvernightPackage() = default;
-
-   virtual double calculateCost() const override;
+    double calculateCost() const override;
 
 private:
-
-   double fee;
+    double extraFeePerOunce;
 };
 
 #endif

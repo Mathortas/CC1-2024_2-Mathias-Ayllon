@@ -1,4 +1,3 @@
-// Exercise 12.11: Date.h
 
 #ifndef DATE_H
 #define DATE_H

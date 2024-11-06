@@ -1,13 +1,13 @@
-// Exercise 12.12: OvernightPackage.cpp
-
 #include "OvernightPackage.h"
 
-OvernightPackage::OvernightPackage( const PData& S, const PData& R,
-                                    const double W, const double C,
-                                    const double F )
-   : Package( S, R, W, C ), fee{ F > 0 ? F : throw "Incorrect fee" } {
-}
+OvernightPackage::OvernightPackage(const std::string& sName, const std::string& sAddress, const std::string& sCity,
+                                   const std::string& sState, unsigned sZip, 
+                                   const std::string& rName, const std::string& rAddress, 
+                                   const std::string& rCity, const std::string& rState, 
+                                   unsigned rZip, double weight, double costPerOunce, double extraFee)
+    : Package(sName, sAddress, sCity, sState, sZip, rName, rAddress, rCity, rState, rZip, weight, costPerOunce),
+      extraFeePerOunce(extraFee) {}
 
 double OvernightPackage::calculateCost() const {
-   return Package::getWeight() * ( Package::getCostPerOunce() + fee );
+    return getWeight() * (getCostPerOunce() + extraFeePerOunce);
 }

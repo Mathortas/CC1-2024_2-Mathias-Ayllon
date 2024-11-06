@@ -1,4 +1,3 @@
-// Exercise 12.11: CommissionEmployee.h
 
 #ifndef COMMISSIONEMPLOYEE_H
 #define COMMISSIONEMPLOYEE_H

@@ -1,28 +1,17 @@
-// Exercise 12.14: HourlyWorker.h
-
 #ifndef HOURLYWORKER_H
 #define HOURLYWORKER_H
-
 #include "Employee.h"
+using namespace std;
 
-class HourlyWorker : public Employee {
-
-public:
-
-   HourlyWorker( const std::string&, const std::string&, const std::string&,
-                 int, int, int, double, unsigned );
-   virtual ~HourlyWorker() = default;
-
-   double getWage() const;
-   unsigned getHours() const;
-
-   virtual double earnings() const override;
-   virtual std::string toString() const override;
-
-private:
-
-   double wage;
-   unsigned hours;
+class HourlyWorker:public Employee {
+    private:
+       double wage;      // salario por hora
+       int hours;        // número de horas trabajadas
+    public:
+       HourlyWorker(const string&, const string&, const string&, double, int);
+    
+       double earnings() const override;
+       string toString() const override;
 };
 
 #endif

@@ -1,4 +1,3 @@
-// Exercise 12.13: CheckingAccount.h
 
 #ifndef CHECKINGACCOUNT_H
 #define CHECKINGACCOUNT_H

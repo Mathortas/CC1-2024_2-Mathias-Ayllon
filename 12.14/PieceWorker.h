@@ -1,28 +1,21 @@
-// Exercise 12.14: PieceWorker.h
-
 #ifndef PIECEWORKER_H
 #define PIECEWORKER_H
-
 #include "Employee.h"
+using namespace std;
 
-class PieceWorker : public Employee {
 
-public:
+class PieceWorker:public Employee {
+    private:
+       double wage;      // salario por pieza
+       int pieces;       // número de piezas producidas
 
-   PieceWorker( const std::string&, const std::string&, const std::string&,
-                int, int, int, double, unsigned );
-   virtual ~PieceWorker() = default;
+    public:
+       PieceWorker(const string&, const string&, const string&, double, int);
 
-   double getWage() const;
-   unsigned getPieces() const;
+       double earnings() const override;
 
-   virtual double earnings() const override;
-   virtual std::string toString() const override;
+       string toString() const override;
 
-private:
-
-   double wage;
-   unsigned pieces;
 };
 
 #endif

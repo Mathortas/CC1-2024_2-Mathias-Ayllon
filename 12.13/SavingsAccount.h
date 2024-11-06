@@ -1,4 +1,3 @@
-// Exercise 12.13: SavingsAccount.h
 
 #ifndef SAVINGSACCOUNT_H
 #define SAVINGSACCOUNT_H

@@ -1,4 +1,3 @@
-// Exercise 12.11: SalariedEmployee.h
 
 #ifndef SALARIEDEMPLOYEE_H
 #define SALARIEDEMPLOYEE_H

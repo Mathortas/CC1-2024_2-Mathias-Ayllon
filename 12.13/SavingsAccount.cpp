@@ -1,4 +1,3 @@
-// Exercise 12.13: SavingsAccount.cpp
 
 #include "SavingsAccount.h"
 

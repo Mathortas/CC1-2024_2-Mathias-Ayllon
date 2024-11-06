@@ -1,29 +1,21 @@
-// Exercise 12.14: BasePlusCommissionEmployee.h
-
-#ifndef BASEPLUSCOMMISSIONEMPLOYEE_H
-#define BASEPLUSCOMMISSIONEMPLOYEE_H
-
+#ifndef BASEPLUS_H
+#define BASEPLUS_H
 #include <string>
 #include "CommissionEmployee.h"
 
 class BasePlusCommissionEmployee : public CommissionEmployee {
+    public:
+        BasePlusCommissionEmployee(const std::string&, const std::string&,
+            const std::string&, double = 0.0, double = 0.0, double = 0.0);
 
-public:
+        void setBaseSalary(double);
+        double getBaseSalary() const;
 
-   BasePlusCommissionEmployee(
-      const std::string&, const std::string&, const std::string&, int, int, int,
-      double = 0.0, double = 0.0, double = 0.0 );
-   virtual ~BasePlusCommissionEmployee() = default;
+        virtual double earnings() const override; // calculate earnings
+        virtual std::string toString() const override; // create string representation
 
-   void setBaseSalary( double );
-   double getBaseSalary() const;
-
-   virtual double earnings() const override;
-   virtual std::string toString() const override;
-
-private:
-
-   double baseSalary;
+    private:        
+        double baseSalary;
 };
 
 #endif

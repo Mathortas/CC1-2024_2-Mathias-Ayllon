@@ -1,4 +1,3 @@
-// Exercise 12.11: BasePlusCommissionEmployee.h
 
 #ifndef BASEPLUSCOMMISSIONEMPLOYEE_H
 #define BASEPLUSCOMMISSIONEMPLOYEE_H

@@ -1,4 +1,3 @@
-// Exercise 12.13: CheckingAccount.cpp
 
 #include "CheckingAccount.h"
 

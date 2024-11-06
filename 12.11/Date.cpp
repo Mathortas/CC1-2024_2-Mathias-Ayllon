@@ -1,4 +1,3 @@
-// Exercise 12.11: Date.cpp
 
 #include <iostream>
 #include <string>

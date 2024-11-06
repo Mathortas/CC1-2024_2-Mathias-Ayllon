@@ -1,4 +1,3 @@
-// Exercise 12.11: Employee.h
 
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H

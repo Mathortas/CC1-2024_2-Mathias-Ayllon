@@ -1,33 +1,26 @@
-// Exercise 12.14: CommissionEmployee.h
-
-#ifndef COMMISSIONEMPLOYEE_H
-#define COMMISSIONEMPLOYEE_H
+#ifndef COMMISSION_H
+#define COMMISSION_H
 
 #include <string>
 #include "Employee.h"
 
 class CommissionEmployee : public Employee {
+    public:
+        CommissionEmployee(const std::string&, const std::string&,
+            const std::string&, double = 0.0, double = 0.0);
 
-public:
+        void setGrossSales(double); // set gross sales amount
+        double getGrossSales() const; // return gross sales amount
 
-   CommissionEmployee(
-      const std::string&, const std::string&, const std::string&, int, int, int,
-      double = 0.0, double = 0.0 );
-   virtual ~CommissionEmployee() = default;
+        void setCommissionRate(double); // set commission rate (percentage)
+        double getCommissionRate() const; // return commission rate
 
-   void setCommissionRate( double );
-   void setGrossSales( double );
-
-   double getCommissionRate() const;
-   double getGrossSales() const;
-
-   virtual double earnings() const override;
-   virtual std::string toString() const override;
-
-private:
-
-   double grossSales;
-   double commissionRate;
+        virtual double earnings() const override; // calculate earnings
+        virtual std::string toString() const override; // create string representation
+            
+    protected:
+        double grossSales; 
+        double commissionRate; 
 };
 
 #endif

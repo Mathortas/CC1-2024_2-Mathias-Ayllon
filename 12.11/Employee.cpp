@@ -1,4 +1,3 @@
-// Exercise 12.11: Employee.cpp
 
 #include <sstream>
 #include "Employee.h"

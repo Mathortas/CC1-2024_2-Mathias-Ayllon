@@ -1,5 +1,3 @@
-// Exercise 12.13: ex_12_13.cpp
-// Polymorphic Banking Program Using Account Hierarchy
 
 #include <iomanip>
 #include <iostream>

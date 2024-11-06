@@ -1,4 +1,3 @@
-// Exercise 12.11: SalariedEmployee.cpp
 
 #include <iomanip>
 #include <sstream>

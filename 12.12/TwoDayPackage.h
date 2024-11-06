@@ -1,23 +1,20 @@
-// Exercise 12.12: TwoDayPackage.h
-
 #ifndef TWODAYPACKAGE_H
 #define TWODAYPACKAGE_H
 
 #include "Package.h"
 
 class TwoDayPackage : public Package {
-
 public:
+    TwoDayPackage(const std::string& senderName, const std::string& senderAddress, const std::string& senderCity,
+                  const std::string& senderState, unsigned senderZip, 
+                  const std::string& recipientName, const std::string& recipientAddress, 
+                  const std::string& recipientCity, const std::string& recipientState, 
+                  unsigned recipientZip, double weight, double costPerOunce, double flatFee);
 
-   explicit TwoDayPackage( const PData&, const PData&,
-                           const double, const double, const double );
-   virtual ~TwoDayPackage() = default;
-
-   virtual double calculateCost() const override;
+    double calculateCost() const override;
 
 private:
-
-   double flatFee;
+    double flatFee;
 };
 
 #endif

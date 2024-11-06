@@ -1,4 +1,3 @@
-// Exercise 12.13: Account.h
 
 #ifndef ACCOUNT_H
 #define ACCOUNT_H
