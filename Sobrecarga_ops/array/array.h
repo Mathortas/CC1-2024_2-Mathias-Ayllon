@@ -13,7 +13,7 @@ class Array {
 
 public:
     // Constructor por defecto
-    explicit Array(int size = 10) : size(size), ptr(new int[size]()) {
+    Array(int size = 10) : size(size), ptr(new int[size]()) {
         std::cout<< "Constructor por defecto llamado " << std::endl;
     }
 
@@ -62,15 +62,11 @@ public:
 
     // Operador de subíndice (solo lectura)
     int operator[](int index) const {
-        if (index < 0 || static_cast<size_t>(index) >= size)
-            throw std::out_of_range("Índice fuera de rango");
         return ptr[index];
     }
 
     // Operador de subíndice (escritura)
     int& operator[](int index) {
-        if (index < 0 || static_cast<size_t>(index) >= size)
-            throw std::out_of_range("Índice fuera de rango");
         return ptr[index];
     }
 
