@@ -3,7 +3,9 @@
 #define ARRAY_H
 
 #include <iostream>
+#include <iomanip>
 #include <stdexcept>
+using namespace std;
 
 class Array {
     friend std::ostream& operator<<(std::ostream& os, const Array& arr);
@@ -78,11 +80,13 @@ private:
 };
 
 // Sobrecarga del operador de salida <<
-std::ostream& operator<<(std::ostream& os, const Array& arr) {
-    for (size_t i = 0; i < arr.size; ++i) {
-        os << arr.ptr[i] << " ";
+ostream& operator<<(ostream& output, const Array& a) {
+    output << "[ ";
+    for(size_t i{0}; i < a.size; ++i) {
+        output << a.ptr[i] << " ";
     }
-    return os;
+    output <<"]" << endl;
+    return output;
 }
 
 // Sobrecarga del operador de entrada >>
