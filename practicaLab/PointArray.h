@@ -51,21 +51,26 @@ public:
         }
         return false;
     }
-    Point operator[](int Index) const {
-        return ptr[Index] ;
+    Point& operator[](int index) {
+        if (index < 0 || index >= static_cast<int>(size)) {
+            throw out_of_range("Index out of bounds");
+        }
+        return ptr[index];
     }
 
-    Point& operator[](int Index){
-        
-        return ptr[Index];
+    const Point& operator[](int index) const {
+        if (index < 0 || index >= static_cast<int>(size)) {
+            throw out_of_range("Index out of bounds");
+        }
+        return ptr[index];
     }
 
-    std::istream& operator>>(std::istream& is, PointArray& parr){
-        for (size_t i = 0; i<parr.size, ++i){
-            is >> int x;
+    friend istream& operator>>(istream& is, PointArray& parr) {
+        for (size_t i = 0; i < parr.size; ++i) {
+            int x, y;
+            is >> x >> y;
             parr.ptr[i].setX(x);
-            is >> int y;
-            part.ptr[i].setY(y);
+            parr.ptr[i].setY(y);
         }
         return is;
     }
