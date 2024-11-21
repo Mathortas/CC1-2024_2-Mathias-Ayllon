@@ -14,7 +14,7 @@ private:
     size_t size;
     Point* ptr;
 public:
-    PointArray() : size{0} , ptr{new Point[size]} {};
+    PointArray() : size{5} , ptr{new Point[size]} {};
     ~PointArray();
 
     PointArray& operator=(const PointArray& other){
@@ -26,6 +26,7 @@ public:
             ptr[i] = other.ptr[i];
         }
     }
+    return *this;
 }
 
     bool operator==(const PointArray& derecha) const {
@@ -74,6 +75,17 @@ public:
         }
         return is;
     }
+
+    friend ostream& operator<<(ostream& os, PointArray& parr){
+        os << "[ ";
+        for (int i = 0; i<parr.size ; ++i){
+            parr.ptr[i].print();
+        }
+        os << " ]";
+        return os;
+    }
 };
+PointArray::~PointArray() {
+    delete[] ptr;  
 
 #endif

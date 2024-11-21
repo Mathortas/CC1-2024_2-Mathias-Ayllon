@@ -13,6 +13,7 @@ class Point
         int x{0}, y{0};
     public:
         Point();
+
         Point(int, int);
         void setX(int);
         void setY(int);
@@ -22,16 +23,19 @@ class Point
         bool operator==(const Point& derecha) const {
             if ( (this->x != derecha.x) || (this->y != derecha.y) )
                 return false;
+            return true;
         }
 
         bool operator!=(const Point& derecha) const {
               if ( (this->x != derecha.x) || (this->y != derecha.y) )
                 return true;
+              return false;
         }
 
         Point& operator=(const Point& otro){
             this->x = otro.getX();
             this->y = otro.getY();
+            return *this;
         }
 };
 
@@ -57,5 +61,6 @@ void Point::print() const {
     std::cout << "(" << x << ", " << y << ")";
 }
 
+Point::Point() : x{0}, y{0} {}  // Default constructor definition
 
 #endif
