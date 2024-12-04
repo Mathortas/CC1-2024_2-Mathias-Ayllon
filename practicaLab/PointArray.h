@@ -87,5 +87,5 @@ public:
 };
 PointArray::~PointArray() {
     delete[] ptr;  
-
+}
 #endif
